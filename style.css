@@ -1,93 +1,175 @@
-  *{
-    margin: 0px;
-    padding: 0px;
-    font-family: Verdana;
-  }
-  
-  .map-container {
-    position: relative;
-    width: 100%;
-    max-width: 900px;
-    margin: auto;
-  }
-  
-  .arena-map {
-    width: 100%;
-    display: block;
-  }
-  
-  .vendor-point {
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    background-color: red;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-  
-  .tooltip {
-    position: absolute;
-    background: black;
-    color: white;
-    padding: 6px 10px;
-    border-radius: 5px;
-    font-size: 14px;
-    display: none;
-    pointer-events: none;
-  }
-  header{
-    padding-top: 20px;
-    background-color: black;
-    text-align: center;
-    color: white;
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Verdana;
+}
 
-  }
-  header h1{
-    padding-top: 10px;
-    background-color: black;
-    text-align: center;
-    color: white;
-    font-size: 20px;
+.map-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+}
 
-  }
-  nav ul{
-    list-style-type: none;
-    padding-top: 20px;
-    display: block;
-    text-align: center;
-    background-color: black;
-    color: white;
-    padding-bottom: 20px;
-    font-size: 0;
-  }
+.arena-map {
+  width: 100%;
+  display: block;
+}
 
- nav li{
-    display: inline-block;
-    list-style:none;
-    font-size: 20px;
-    color: white;
-    background-color: rgb(0, 0, 0);
-    font-weight: bold;
-    margin: 0px;
-    transition: transform 0.1s ease;
- }
+.vendor-point {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: red;
+  border-radius: 50%;
+  cursor: pointer;
+}
 
- nav li:hover{
-    transform: scale(1.1);
- }
+.tooltip {
+  position: absolute;
+  background: black;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  display: none;
+  pointer-events: none;
+}
 
- nav a {
-    display: inline-block;
-    color: white;
-    background-color: rgb(0, 0, 0);
-    text-decoration: none;
-    border: 1px solid;
-    border-color:aliceblue;
-    padding: 9px;
-    margin: 0;
-  }
+header {
+  padding-top: 20px;
+  background-color: black;
+  text-align: center;
+  color: white;
+}
 
-  h2{
+header h1 {
+  padding-top: 10px;
+  background-color: black;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+
+/* Make the navbar a flex container */
+nav.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 0px 20px;
+}
+
+/* Adjust size for both logos */
+.navbar-logo {
+  width: 50px;
+  height: auto;
+}
+
+.navbar-logo2 {
+  width: 100px;
+  height: auto;
+}
+
+/* Create a flex container for both logos */
+.navbar-logos {
+  display: flex;
+  gap: 10px; /* Add space between logos */
+}
+
+/* Center navbar items */
+.navbar-center {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px; /* Space between the navbar links */
+}
+
+/* Style for each list item */
+.navbar-center li {
+  font-size: 20px;
+  font-weight: bold;
+  transition: transform 0.1s ease;
+}
+
+.navbar-center li:first-child {
+  margin-left: 520px; /* Adjust the value as needed */
+}
+
+.navbar-center li:hover {
+  transform: scale(1.1);
+}
+
+/* Navbar links style */
+.navbar-center a {
+  color: white;
+  background-color: black;
+  text-decoration: none;
+  border: 1px solid aliceblue;
+  padding: 9px;
+}
+
+/* Spacer: helps balance layout */
+.navbar-spacer {
+  flex-grow: 1; /* Takes remaining space */
+}
+
+/* ====== HEADINGS ====== */
+h2 {
   text-align: center;
   padding-top: 20px;
+}
+
+/* ====== Media Queries for Responsiveness ====== */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+  /* Adjust logo size */
+  .navbar-logo {
+    width: 40px;
   }
+
+  .navbar-logo2 {
+    width: 80px;
+  }
+
+  /* Stack the navbar items vertically */
+  nav.navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Adjust the navbar-center (links) */
+  .navbar-center {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  /* Remove spacer on smaller screens */
+  .navbar-spacer {
+    display: none;
+  }
+
+  /* Reduce the font size for smaller screens */
+  .navbar-center li {
+    font-size: 18px;
+  }
+
+  .navbar-center a {
+    padding: 7px;
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+  /* Further adjust font sizes */
+  .navbar-center li {
+    font-size: 16px;
+  }
+
+  .navbar-center a {
+    padding: 6px;
+  }
+}
