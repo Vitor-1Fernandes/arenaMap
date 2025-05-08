@@ -36,6 +36,13 @@
   pointer-events: none;
 }
 
+#tooltip img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
 header {
   padding-top: 20px;
   background-color: black;
@@ -179,4 +186,9 @@ h3 p {
 
 .textcontainer .button:hover {
   transform: scale(1.1);
+}
+
+.textcontainer .texto .button{
+  margin: 10px 20px;
+
 }
