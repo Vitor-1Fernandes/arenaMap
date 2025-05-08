@@ -116,6 +116,19 @@ h2 {
   text-align: center;
   padding-top: 20px;
 }
+
+.e1content{
+  justify-content: center;
+  text-align: center;
+
+}
+
+.e1content p {
+  justify-content: center;
+  text-align: center;
+
+}
+
 h3 {
   text-align: center;
   padding-top: 60px;
