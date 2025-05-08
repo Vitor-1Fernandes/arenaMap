@@ -80,22 +80,21 @@ nav.navbar {
 /* Center navbar items */
 .navbar-center {
   display: flex;
+  justify-content: center;  /* Center the item */
+  align-items: center;  /* Ensure vertical centering */
+  flex-grow: 1;  /* Ensure it takes up all available space between the logos */
   list-style: none;
-  padding: 0;
   margin: 0;
-  gap: 20px; /* Space between the navbar links */
+  padding: 0;
+  position: absolute; /* Use absolute positioning */
+  left: 50%; /* Position the element at 50% */
+  transform: translateX(-50%); /* Shift it back by 50% of its width to truly center it */
 }
 
-/* Style for each list item */
 .navbar-center li {
   font-size: 20px;
   font-weight: bold;
   transition: transform 0.1s ease;
-}
-
-/* Margin adjustment for the first item (only for larger screens) */
-.navbar-center li:first-child {
-  margin-left: 500px; /* Adjust the value as needed */
 }
 
 /* Navbar links style */
@@ -112,18 +111,29 @@ nav.navbar {
   flex-grow: 1; /* Takes remaining space */
 }
 
-/* ====== HEADINGS ====== */
+/* Headings and Content */
 h2 {
   text-align: center;
   padding-top: 20px;
 }
+
+.e1content{
+  justify-content: center;
+  text-align: center;
+
+}
+
+.e1content p {
+  justify-content: center;
+  text-align: center;
+
+}
+
 h3 {
   text-align: center;
   padding-top: 60px;
- 
 }
-h3 p{
-
+h3 p {
   border: 2px solid;
   padding: 10px;
   background-color: black;
@@ -131,36 +141,32 @@ h3 p{
   display: inline;
 }
 
-.textcontainer{
-
+.textcontainer {
   margin-top: 30px;
   text-align: center;
   display: flex;
   justify-content: center;
 }
 
-.textcontainer .texto{
-    margin-top: 10px;
-    text-align: center;
-    display: inline-block;
-    border: 2px solid;
-    padding: 10px;
-    border-color: grey;
-    width: auto;
-    justify-content: center;
-    padding: 20px;
+.textcontainer .texto {
+  margin-top: 10px;
+  text-align: center;
+  display: inline-block;
+  border: 2px solid;
+  padding: 10px;
+  border-color: grey;
+  width: auto;
+  justify-content: center;
+  padding: 20px;
 }
 
-.textcontainer .texto p{
-
+.textcontainer .texto p {
   font-weight: bold;
   margin-bottom: 20px;
   font-size: 20px;
-
 }
 
-.textcontainer .texto .button a{
-
+.textcontainer .texto .button a {
   display: block;
   padding: 10px 20px;
   background-color: black;
@@ -169,11 +175,8 @@ h3 p{
   border: 1px solid grey;
   border-radius: 5px;
   transition: transform 0.5s ease;
-
 }
 
 .textcontainer .button:hover {
-
   transform: scale(1.1);
-
 }
