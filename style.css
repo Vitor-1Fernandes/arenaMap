@@ -93,12 +93,9 @@ nav.navbar {
   transition: transform 0.1s ease;
 }
 
+/* Margin adjustment for the first item (only for larger screens) */
 .navbar-center li:first-child {
   margin-left: 520px; /* Adjust the value as needed */
-}
-
-.navbar-center li:hover {
-  transform: scale(1.1);
 }
 
 /* Navbar links style */
@@ -150,6 +147,11 @@ h2 {
   /* Remove spacer on smaller screens */
   .navbar-spacer {
     display: none;
+  }
+
+  /* Remove the margin for the first item on smaller screens */
+  .navbar-center li:first-child {
+    margin-left: 0;
   }
 
   /* Reduce the font size for smaller screens */
