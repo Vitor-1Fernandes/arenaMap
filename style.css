@@ -95,7 +95,7 @@ nav.navbar {
 
 /* Margin adjustment for the first item (only for larger screens) */
 .navbar-center li:first-child {
-  margin-left: 520px; /* Adjust the value as needed */
+  margin-left: 500px; /* Adjust the value as needed */
 }
 
 /* Navbar links style */
@@ -117,61 +117,63 @@ h2 {
   text-align: center;
   padding-top: 20px;
 }
+h3 {
+  text-align: center;
+  padding-top: 60px;
+ 
+}
+h3 p{
 
-/* ====== Media Queries for Responsiveness ====== */
-
-/* For tablets and smaller screens */
-@media (max-width: 768px) {
-  /* Adjust logo size */
-  .navbar-logo {
-    width: 40px;
-  }
-
-  .navbar-logo2 {
-    width: 80px;
-  }
-
-  /* Stack the navbar items vertically */
-  nav.navbar {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  /* Adjust the navbar-center (links) */
-  .navbar-center {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  /* Remove spacer on smaller screens */
-  .navbar-spacer {
-    display: none;
-  }
-
-  /* Remove the margin for the first item on smaller screens */
-  .navbar-center li:first-child {
-    margin-left: 0;
-  }
-
-  /* Reduce the font size for smaller screens */
-  .navbar-center li {
-    font-size: 18px;
-  }
-
-  .navbar-center a {
-    padding: 7px;
-  }
+  border: 2px solid;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  display: inline;
 }
 
-/* For mobile screens */
-@media (max-width: 480px) {
-  /* Further adjust font sizes */
-  .navbar-center li {
-    font-size: 16px;
-  }
+.textcontainer{
 
-  .navbar-center a {
-    padding: 6px;
-  }
+  margin-top: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.textcontainer .texto{
+    margin-top: 10px;
+    text-align: center;
+    display: inline-block;
+    border: 2px solid;
+    padding: 10px;
+    border-color: grey;
+    width: auto;
+    justify-content: center;
+    padding: 20px;
+}
+
+.textcontainer .texto p{
+
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 20px;
+
+}
+
+.textcontainer .texto .button a{
+
+  display: block;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  border: 1px solid grey;
+  border-radius: 5px;
+  transition: transform 0.5s ease;
+
+}
+
+.textcontainer .button:hover {
+
+  transform: scale(1.1);
+
 }
